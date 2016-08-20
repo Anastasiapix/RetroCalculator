@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +18,58 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchbg" translatesAutoresizingMaskIntoConstraints="NO" id="ryK-xI-fuE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Retro-Calc" translatesAutoresizingMaskIntoConstraints="NO" id="fcz-Qg-j31">
+                                <rect key="frame" x="138" y="56" width="325" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fcz-Qg-j31" secondAttribute="height" multiplier="325:72" id="BT3-qj-aA4"/>
+                                    <constraint firstAttribute="width" secondItem="fcz-Qg-j31" secondAttribute="height" multiplier="390:83" id="SAm-4W-hla"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SAm-4W-hla"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="27B-CT-9gl">
+                                <rect key="frame" x="147" y="204" width="307" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="3OA-90-xD3"/>
+                                    <constraint firstAttribute="height" constant="155" id="M6w-Vu-1zh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launchground" translatesAutoresizingMaskIntoConstraints="NO" id="Ibu-VJ-Exe">
+                                <rect key="frame" x="-7" y="500" width="607" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="HIJ-gV-lcd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="27B-CT-9gl" firstAttribute="top" secondItem="fcz-Qg-j31" secondAttribute="bottom" constant="76" id="2Br-0S-C8T"/>
+                            <constraint firstItem="ryK-xI-fuE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="4z2-uR-YGC"/>
+                            <constraint firstItem="27B-CT-9gl" firstAttribute="top" secondItem="fcz-Qg-j31" secondAttribute="bottom" constant="76" id="6I2-6c-9PZ"/>
+                            <constraint firstItem="ryK-xI-fuE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6Pr-l3-ZBv"/>
+                            <constraint firstItem="fcz-Qg-j31" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="81S-od-dw4"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ryK-xI-fuE" secondAttribute="bottom" id="CBq-ge-7m8"/>
+                            <constraint firstItem="27B-CT-9gl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OZw-ig-SYa"/>
+                            <constraint firstAttribute="trailing" secondItem="Ibu-VJ-Exe" secondAttribute="trailing" id="T0L-wj-WNV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fcz-Qg-j31" secondAttribute="trailing" constant="40" id="sU2-G8-xOK"/>
+                            <constraint firstAttribute="trailing" secondItem="ryK-xI-fuE" secondAttribute="trailing" id="sYY-pt-isK"/>
+                            <constraint firstItem="Ibu-VJ-Exe" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="w5b-Il-8AC"/>
+                            <constraint firstItem="fcz-Qg-j31" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="40" id="ypU-52-okL"/>
+                            <constraint firstAttribute="bottom" secondItem="Ibu-VJ-Exe" secondAttribute="bottom" constant="6" id="zk2-C6-A7q"/>
+                            <constraint firstItem="fcz-Qg-j31" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="20" id="znK-zc-dBS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6I2-6c-9PZ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +77,10 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Retro-Calc" width="755" height="111"/>
+        <image name="launchbg" width="1433" height="957"/>
+        <image name="launchground" width="999" height="225"/>
+        <image name="robot" width="786" height="402"/>
+    </resources>
 </document>
