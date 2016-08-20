@@ -116,5 +116,16 @@ class ViewController: UIViewController {
         
         btnSound.play()
     }
+    
+    @IBAction func clrBtnPressed(sender: AnyObject) {
+        playSound()
+        leftValStr = ""
+        runningNumber = ""
+        currentOperation = Operation.Empty
+        outputLbl.text = "0"
+    }
+    
+    
+    
 }
 
